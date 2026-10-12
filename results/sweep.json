@@ -1,0 +1,176 @@
+{
+  "budgets": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "seeds": 5,
+  "error_rate": 0.45,
+  "rows": [
+    {
+      "budget": 4,
+      "strategies": {
+        "greedy": {
+          "accuracy": 0.575,
+          "accuracy_std": 0.08052561704203204,
+          "samples": 1.0,
+          "ece": 0.425
+        },
+        "self_consistency": {
+          "accuracy": 0.81875,
+          "accuracy_std": 0.041457809879442496,
+          "samples": 4.0,
+          "ece": 0.2375
+        },
+        "best_of_n_verified": {
+          "accuracy": 0.88125,
+          "accuracy_std": 0.041457809879442496,
+          "samples": 4.0,
+          "ece": 0.10540972222222224
+        },
+        "vwsc": {
+          "accuracy": 0.95,
+          "accuracy_std": 0.03186887195995491,
+          "samples": 4.0,
+          "ece": 0.05762339498254286
+        },
+        "vwsc_adaptive": {
+          "accuracy": 0.8875,
+          "accuracy_std": 0.03186887195995491,
+          "samples": 2.325,
+          "ece": 0.12142985749986415
+        },
+        "dvts": {
+          "accuracy": 0.79375,
+          "accuracy_std": 0.05077524002897475,
+          "samples": 4.0,
+          "ece": 0.1828125
+        }
+      }
+    },
+    {
+      "budget": 8,
+      "strategies": {
+        "greedy": {
+          "accuracy": 0.575,
+          "accuracy_std": 0.08052561704203204,
+          "samples": 1.0,
+          "ece": 0.425
+        },
+        "self_consistency": {
+          "accuracy": 0.925,
+          "accuracy_std": 0.03186887195995491,
+          "samples": 8.0,
+          "ece": 0.315625
+        },
+        "best_of_n_verified": {
+          "accuracy": 0.975,
+          "accuracy_std": 0.023385358667337135,
+          "samples": 8.0,
+          "ece": 0.025
+        },
+        "vwsc": {
+          "accuracy": 0.99375,
+          "accuracy_std": 0.0125,
+          "samples": 8.0,
+          "ece": 0.07294733302110545
+        },
+        "vwsc_adaptive": {
+          "accuracy": 0.9875,
+          "accuracy_std": 0.015309310892394862,
+          "samples": 4.425,
+          "ece": 0.0653034537283422
+        },
+        "dvts": {
+          "accuracy": 0.94375,
+          "accuracy_std": 0.023385358667337135,
+          "samples": 8.0,
+          "ece": 0.0972907884180435
+        }
+      }
+    },
+    {
+      "budget": 16,
+      "strategies": {
+        "greedy": {
+          "accuracy": 0.575,
+          "accuracy_std": 0.08052561704203204,
+          "samples": 1.0,
+          "ece": 0.425
+        },
+        "self_consistency": {
+          "accuracy": 0.96875,
+          "accuracy_std": 0.03423265984407288,
+          "samples": 16.0,
+          "ece": 0.396484375
+        },
+        "best_of_n_verified": {
+          "accuracy": 0.95,
+          "accuracy_std": 0.042389562394532926,
+          "samples": 16.0,
+          "ece": 0.05
+        },
+        "vwsc": {
+          "accuracy": 1.0,
+          "accuracy_std": 0.0,
+          "samples": 16.0,
+          "ece": 0.0703554079246448
+        },
+        "vwsc_adaptive": {
+          "accuracy": 0.99375,
+          "accuracy_std": 0.0125,
+          "samples": 8.5,
+          "ece": 0.06553381658559677
+        },
+        "dvts": {
+          "accuracy": 0.96875,
+          "accuracy_std": 0.01976423537605237,
+          "samples": 16.0,
+          "ece": 0.04597396833104082
+        }
+      }
+    },
+    {
+      "budget": 32,
+      "strategies": {
+        "greedy": {
+          "accuracy": 0.575,
+          "accuracy_std": 0.08052561704203204,
+          "samples": 1.0,
+          "ece": 0.425
+        },
+        "self_consistency": {
+          "accuracy": 0.9875,
+          "accuracy_std": 0.015309310892394862,
+          "samples": 32.0,
+          "ece": 0.4177734375
+        },
+        "best_of_n_verified": {
+          "accuracy": 0.95,
+          "accuracy_std": 0.042389562394532926,
+          "samples": 32.0,
+          "ece": 0.05
+        },
+        "vwsc": {
+          "accuracy": 1.0,
+          "accuracy_std": 0.0,
+          "samples": 32.0,
+          "ece": 0.06942699136532202
+        },
+        "vwsc_adaptive": {
+          "accuracy": 1.0,
+          "accuracy_std": 0.0,
+          "samples": 16.5,
+          "ece": 0.06649228407640032
+        },
+        "dvts": {
+          "accuracy": 0.9875,
+          "accuracy_std": 0.015309310892394862,
+          "samples": 32.0,
+          "ece": 0.04019953226899916
+        }
+      }
+    }
+  ]
+}

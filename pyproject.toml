@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reasonforge"
+version = "1.0.0"
+description = "Verifiable System-2 reasoning engine: claim-level symbolic verifiers + VWSC aggregation + CEGAR refinement."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "晨星 (Chenxing)" }]
+keywords = [
+    "reasoning",
+    "system-2",
+    "self-consistency",
+    "verification",
+    "chain-of-thought",
+    "llm",
+    "test-time-compute",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+sympy = ["sympy>=1.11"]
+test = ["pytest>=7.0", "sympy>=1.11"]
+
+[project.urls]
+Homepage = "https://github.com/CJX0712/reasonforge"
+Repository = "https://github.com/CJX0712/reasonforge"
+
+[tool.setuptools.packages.find]
+include = ["reasonforge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
