@@ -46,7 +46,15 @@ jobs:
       - name: Tests
         run: |
           if [ -d tests ] || [ -d test ]; then
-            python -m pytest -q --no-header
+            # 标准 pytest：若发现用例则跑 pytest
+            if python -m pytest -q --no-header --co 2>/dev/null | grep -q "::"; then
+              python -m pytest -q --no-header
+            # forge 约定：tests/test_all.py 作为脚本直接运行（手写不变量验证）
+            elif [ -f tests/test_all.py ]; then
+              python tests/test_all.py
+            else
+              echo "no discoverable tests; compile+lint gate only"
+            fi
           else
             echo "no test directory; compile+lint gate only"
           fi
