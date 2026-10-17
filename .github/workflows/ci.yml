@@ -33,7 +33,11 @@ jobs:
 
       - name: Lint
         run: |
-          if [ -f pyproject.toml ] || [ -f ruff.toml ] || [ -f .ruff.toml ]; then
+          # 仅当仓库显式配置了 ruff 时才跑完整 lint；否则只查崩溃级错误
+          # （未用导入、风格问题等由开发者自行决定，不应让 CI 无脑变红）
+          if [ -f ruff.toml ] || [ -f .ruff.toml ]; then
+            python -m ruff check .
+          elif [ -f pyproject.toml ] && grep -q "\[tool.ruff\]" pyproject.toml; then
             python -m ruff check .
           else
             python -m ruff check --select E9,F63,F7,F82 --ignore E501 .
